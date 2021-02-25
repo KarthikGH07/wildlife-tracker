@@ -6,6 +6,7 @@ import { useState } from 'react';
 import LocationMarkerIce from './LocationMarkerIce';
 import LocationMarkerVolcano from './LocationMarkerVolcano';
 
+const API_KEY = process.env.REACT_APP_GOOGLE_KEY
 
 const NATURAL_EVENT_WILDFIRE = 8;
 //Severe Storms
@@ -57,7 +58,7 @@ const Map = ({ center, zoom, eventData }) => {
     return (
         <div className='map'>
             <GoogleMapReact
-                bootstrapURLKeys = {{ key: 'AIzaSyAyVhyRS-x3QvBwADZX3LQdDNrL5lz_j-w'}}
+                bootstrapURLKeys = {{ key: `${API_KEY}`}}
                 defaultCenter={center}
                 defaultZoom={zoom}
                 >
